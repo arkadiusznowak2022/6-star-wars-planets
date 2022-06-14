@@ -1,0 +1,110 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  cursor: pointer;
+}
+
+.overlay .popup {
+  width: 300px;
+  height: 300px;
+  margin: 180px auto;
+  padding: 10px;
+
+  border: 1px solid yellow;
+  box-shadow: 0px 0px 10px yellow;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0, 0.9);
+
+  overflow-y: auto;
+  cursor: default;
+}
+
+.overlay .popup h2 {
+  margin-bottom: 10px;
+}
+
+.overlay .popup .fa-earth-europe {
+  color: rgb(44, 148, 252);
+  animation: rotating-planet infinite 15s linear;
+}
+
+.overlay .popup .infobox-list-item {
+  line-height: 20px;
+}
+
+.overlay .popup .infobox-list-item:hover {
+  /* color: rgb(248, 248, 184); */
+  color: rgb(44, 148, 252);
+  cursor: pointer;
+}
+
+.overlay .popup .waiting-spinners {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.overlay .popup .waiting-spinners .spinner-field {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay .popup .infobox-info-cont {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  color: rgb(248, 248, 219);
+}
+
+.overlay .popup .infobox-info-cont p {
+  margin: 5px;
+}
+
+.overlay .popup .infobox-info-cont .fa-reply {
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+.overlay .popup .infobox-info-cont .fa-reply:hover {
+  cursor: pointer;
+  color: rgb(44, 148, 252);
+  transform: rotate(-20deg);
+  transition: 0.5s;
+}
+
+/* Scrollbar */
+
+.overlay .popup::-webkit-scrollbar {
+  width: 5px;
+}
+
+.overlay .popup::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0, 0.9);
+  margin: 20px 0;
+}
+
+.overlay .popup::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 0, 0.718);
+  border-radius: 10px;
+}
+
+.overlay .popup::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+
+/* Animation */
+
+@keyframes rotating-planet {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

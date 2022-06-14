@@ -1,0 +1,17 @@
+.planets-cont {
+  max-width: 500px;
+  margin: 100px auto;
+  color: white;
+}
+
+.planets-cont h1 {
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 50px;
+}
+
+.loading-spinner-cont {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+}
